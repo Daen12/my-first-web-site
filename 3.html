@@ -1,12 +1,25 @@
 <!doctype html>
 <html>
 <head>
-<title>WEB1 - Javascript</title>
-<meta charset="'utf-8">
+    <title>WEB1 - Javascript</title>
+    <meta charset="'utf-8">
+    <link rel = "stylesheet" href="style.css">
+        <style>
+            .if{
+                border:1.5px solid palevioletred;
+                padding : 2px;
+                margin : 20px;
+                display:block; 
+               width : 60px;
+                
+            }
+        </style>
+
 </head>
 
 <body>
     <h1><a href = "index.html">WEB</a></h1>
+<div id="grid">
 <ol>
     <li><a href = "1.html">HTML</a></li>
     <li><a href = "2.html">CSS</a></li>
@@ -21,9 +34,207 @@
 
   gtag('config', 'G-FNKS509J7L');
 </script>
-<h2>Javascript</h2>
-<p>
-    This is the body for Javascript
-</p>
+
+
+<div id="article">
+    <h2>Javascript</h2>
+
+    <input type ='button' value="day" onclick="
+    document.querySelector('body').style.backgroundColor='white';
+    document.querySelector('body').style.color='black';
+    ">
+    <input type ='button' value="night" onclick="
+    document.querySelector('body').style.backgroundColor='black';
+    document.querySelector('body').style.color='white';
+    ">
+
+    <input id="night_day" type="button" value="Black" onclick="
+    if(document.querySelector('#night_day').value === 'Black'){
+        document.querySelector('body').style.backgroundColor='black';
+        document.querySelector('body').style.color='white';
+        document.querySelector('#night_day').value ='White'
+
+        let list = document.querySelectorAll('a');
+        let f = 0;
+        while(f<list.length){
+            list[f].style.color = 'powderblue';
+            f = f + 1;
+    }
+    }  else {
+        document.querySelector('body').style.backgroundColor='white';
+        document.querySelector('body').style.color='black';
+        document.querySelector('#night_day').value ='Black'
+
+        let list = document.querySelectorAll('a');
+        let f = 0;
+        while(f < list.length){
+            list[f].style.color = 'blue';
+            f = f + 1;
+    }
+    }
+    ">
+    <p>
+        Javascript functions on html. It is more interactive than html, for example, when writin 1+1 on html it returns the same script whereas on javascript it returns 2.
+        <br> Interactive output of Javascript on a webpage is called 'Event'.
+        <br> Some key declarations(events) of Javascript are = 'onclick', 'onchange', 'onkeydown', etc...
+       
+    </p>
+    <p>
+        <strong>1. Numbers and Strings :</strong>
+        Site 'Mozilla' shows properties and methods of strings that we can use on Javascript.
+    </p>
+    <p>
+       <strong> 2. Variables and Boolean operators :</strong>
+       Examples-
+       <br>var name = 'daen';
+       <br>alert("Style tag refers to css. When tagging style we can use css functions "+name+" in webpage. However, when style tag is in between HTML lines, it is one of the "+name+" attributes of HTML. When style is tagged alone, it needs {} which indicates the attributes that belong in that specifi function of CSS. {} is called Selector, and function "+name+" inside it is called Declaration."); 
+       <br><br> -> Because name variable was set as 'daen', it returns 'daen' in the location with "+name" in the paragraph.
+    
+    </p>
+    <p>
+        <strong>3. Program :</strong>
+        <br> has to do with 'time'. html is not a program because it has no sequencial events.
+    </p>
+    <p>
+        <strong>4. Comparison Operator & Boolean</strong>
+        <br> === means equal to? / < (html : &lt;) greater than / 
+        <br> True/False is called Boolean.
+    </p>
+    <p>
+        <strong>5. Conditional Statements:</strong><br>
+            <script>
+                document.write("1<br>");
+                document.write("2<br>");
+                document.write("3<br>");
+                document.write("4<br>");
+            </script>
+            <p class = 'if'>*IF-true</p>
+            <script>
+                document.write("1<br>");
+                if(1===1){
+                document.write("2<br>");
+            } else{
+                document.write("3<br>");
+            } 
+                document.write("4<br>");
+           
+            </script>
+        <br>Let's make toggle button using 'if'/'else' statement.
+        <br> First of all, we need to figure out what goes inside if() statement. We search for value on internet, by keywords 'javascript element get value' or whatever is similar. 
+    </p>
+    <script>
+        <input type="button" value="Black" onclick="
+        let target = document.querySelector('body');
+        if(this.value === 'Black'){
+            target.style.backgroundColor='black';
+            target.style.color='white';
+            this.value ='White'
+
+            let list = document.querySelectorAll('a');
+            let f = 0;
+            while(f<list.length){
+                list[f].style.color = 'powderblue';
+                f = f + 1;
+        } 
+        }else {
+            target.style.backgroundColor='white';
+            target.style.color='black';
+            this.value ='Black'
+
+            let list = document.querySelectorAll('a');
+            let f = 0;
+            while(f<list.length){
+                list[f].style.color = 'blue';
+                f = f + 1;
+        }
+        }
+        ">
+
+    <p>
+        <strong>6. Loop Statement:</strong>
+        <ul>
+            <script>
+                document.write('<li>1</li>');
+                let i = 0;
+                while(i<3){
+                    document.write('<li>2</li>');
+                    document.write('<li>3</li>');
+                    i = i+1;
+                }
+                document.write('<li>4</li>');
+            
+            </script>
+          
+        </ul>
+        <p>
+            If we need to repeat 2, and 3 over and over - use loop statement
+        </p>
+        <p>
+            <div style = color:gray>>Example : Coworkers</div>
+
+            <script>
+                var coworkers = ['name1', 'name2', 'name3', 'name4'];
+            </script>
+
+            <ul>
+                <script>
+                    let e = 0;
+                    while(e < coworkers.length){
+                    document.write('<li>'+coworkers[e]+'</li>');
+                    e = e+1;
+                    }
+                </script>
+            </ul>
+            This is same as repeatedly writing the list of names like:
+            <ul>
+                <li>name1</li>
+                <li>name2</li>
+                <li>name3</li>
+                <li>name4</li>
+            </ul>
+        </p>
+
+        <p>
+            <strong>7. Function :</strong>
+            <script>
+                function nightDayHandler(self){
+                let target = document.querySelector('body');
+                if(self.value === 'Black'){
+                    target.style.backgroundColor='black';
+                    target.style.color='white';
+                    self.value ='White'
+
+                    let list = document.querySelectorAll('a');
+                    let f = 0;
+                    while(f<list.length){
+                        list[f].style.color = 'powderblue';
+                        f = f + 1;
+                    } 
+                } else {
+                    target.style.backgroundColor='white';
+                    target.style.color='black';
+                    self.value ='Black'
+
+                    let list = document.querySelectorAll('a');
+                    let f = 0;
+                    while(f<list.length){
+                        list[f].style.color = 'blue';
+                        f = f + 1;
+                    }
+                }
+            }
+
+            
+            </script>
+            <br><br>
+            <input id="night_day" type="button" value="Black" onclick="
+            nightDayHandler(this);">
+            <input id="night_day" type="button" value="Black" onclick="
+            nightDayHandler(this);">
+            
+        </p>
+    </p>
+   
+    
 </body>
 </html>
